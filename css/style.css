@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #131313;
+  background-image: url("https://uploads-ssl.webflow.com/6178c15da19f8bc0554f7651/6178c15ea19f8bd99f4f7667_grunge.png");
+  background-size: cover;
+  box-sizing: border-box; }
+
+.username {
+  color: #fff;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+.project-description {
+  position: relative;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: 400; }
+  .project-description::before {
+    background-color: #585454;
+    content: "";
+    position: absolute;
+    height: 1.4rem;
+    left: -1.2rem;
+    top: 0.3rem;
+    width: 1px; }
+
+.u-margin-right-small {
+  margin-right: 1rem; }
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  padding: 2.4rem 3.2rem;
+  width: 100%; }
+  .header__project-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 28%; }
+    .header__project-info__avatar {
+      background-color: #fff;
+      border-radius: 50%;
+      height: 48px;
+      width: 48px; }
+  .header__actions {
+    align-items: center;
+    display: flex;
+    font-family: "Rubik Mono One", sans-serif;
+    justify-content: space-evenly;
+    width: 19%; }
+    .header__actions__btn {
+      align-items: center;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.2s; }
+      .header__actions__btn--clone {
+        background-color: #131313;
+        box-shadow: 0.8rem 0.6rem -0.6rem;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.25);
+        color: #fff;
+        padding: 1.2rem 1.9rem; }
+        .header__actions__btn--clone:hover {
+          border-color: #4353ff; }
+      .header__actions__btn--subscribe {
+        background-color: #fd3846;
+        border: none;
+        letter-spacing: 0.2rem;
+        color: #000;
+        padding: 1.6rem 1.8rem; }
+        .header__actions__btn--subscribe img {
+          width: 15px; }
+      .header__actions__btn:hover {
+        transform: translateY(-0.2rem); }
