@@ -38,6 +38,40 @@ body {
 .u-margin-right-small {
   margin-right: 1rem; }
 
+.floating-button {
+  align-items: center;
+  background: #fd3846;
+  border-radius: 50%;
+  display: flex;
+  height: 8rem;
+  justify-content: center;
+  position: fixed;
+  width: 8rem;
+  transition: 0.4s;
+  transition-property: height, width; }
+  .floating-button .floating-button-image {
+    width: 3rem; }
+  .floating-button--extra-small {
+    height: 0.7rem;
+    width: 0.7rem;
+    transition: 0.4s;
+    transition-property: height, width; }
+    .floating-button--extra-small .floating-button-image {
+      display: none; }
+  .floating-button:hover {
+    cursor: pointer; }
+
+.image-container {
+  background-color: white;
+  height: 60rem;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120rem;
+  z-index: -10; }
+
 .header {
   align-items: center;
   display: flex;
