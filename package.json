@@ -1,0 +1,12 @@
+{
+  "name": "country-sliders",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.scss -w"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
