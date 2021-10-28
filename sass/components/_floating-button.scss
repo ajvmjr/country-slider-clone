@@ -1,0 +1,48 @@
+.floating-button {
+  align-items: center;
+  background: $red-color;
+  border-radius: 50%;
+  display: flex;
+  height: 8rem;
+  justify-content: center;
+  position: fixed;
+  width: 8rem;
+  transition: 0.4s;
+  transition-property: height, width;
+  z-index: 20;
+
+  .floating-button-image {
+    width: 3rem;
+  }
+
+  &--extra-small {
+    height: 0.7rem;
+    transition: 0.4s;
+    transition-property: height, width;
+    width: 0.7rem;
+
+    .floating-button-image {
+      display: none;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: $medium) {
+    height: 6rem;
+    width: 6rem;
+
+    &--extra-small {
+      height: 0.7rem;
+      transition: 0.4s;
+      transition-property: height, width;
+      width: 0.7rem;
+
+      .floating-button-image {
+        display: none;
+      }
+    }
+  }
+}

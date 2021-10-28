@@ -1,0 +1,215 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10%); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #131313;
+  background-image: url("https://uploads-ssl.webflow.com/6178c15da19f8bc0554f7651/6178c15ea19f8bd99f4f7667_grunge.png");
+  background-size: cover;
+  box-sizing: border-box; }
+
+.username {
+  color: #fff;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+.project-description {
+  position: relative;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: 400; }
+  .project-description::before {
+    background-color: #585454;
+    content: "";
+    position: absolute;
+    height: 1.4rem;
+    left: -1.2rem;
+    top: 0.3rem;
+    width: 1px; }
+
+.country-name {
+  color: transparent;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 13vw;
+  font-weight: 400;
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: white; }
+  :hover > .country-name {
+    color: #fff; }
+  @media screen and (max-width: 1400px) {
+    .country-name {
+      font-size: 11vw; } }
+
+.u-margin-right-small {
+  margin-right: 1rem; }
+
+.floating-button {
+  align-items: center;
+  background: #fd3846;
+  border-radius: 50%;
+  display: flex;
+  height: 8rem;
+  justify-content: center;
+  position: fixed;
+  width: 8rem;
+  transition: 0.4s;
+  transition-property: height, width;
+  z-index: 20; }
+  .floating-button .floating-button-image {
+    width: 3rem; }
+  .floating-button--extra-small {
+    height: 0.7rem;
+    transition: 0.4s;
+    transition-property: height, width;
+    width: 0.7rem; }
+    .floating-button--extra-small .floating-button-image {
+      display: none; }
+  .floating-button:hover {
+    cursor: pointer; }
+  @media screen and (max-width: 1400px) {
+    .floating-button {
+      height: 6rem;
+      width: 6rem; }
+      .floating-button--extra-small {
+        height: 0.7rem;
+        transition: 0.4s;
+        transition-property: height, width;
+        width: 0.7rem; }
+        .floating-button--extra-small .floating-button-image {
+          display: none; } }
+
+.image-container {
+  animation: moveInLeft 0.5s ease-in-out;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: none;
+  display: flex;
+  filter: grayscale(100%);
+  height: 60vh;
+  justify-content: center;
+  max-width: 120rem;
+  width: 100%;
+  transition: all 0.5s; }
+  .image-container:hover {
+    filter: grayscale(0%);
+    transform: scale(0.85); }
+  @media screen and (max-width: 1400px) {
+    .image-container {
+      min-width: 95rem; } }
+
+.header {
+  align-items: center;
+  display: flex;
+  cursor: none;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  padding: 3.5rem 3.2rem;
+  width: 100%; }
+  .header__project-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 28%; }
+    .header__project-info__avatar {
+      align-items: center;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      height: 48px;
+      justify-content: center;
+      width: 48px; }
+      .header__project-info__avatar img {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px; }
+  .header__actions {
+    align-items: center;
+    display: flex;
+    font-family: "Rubik Mono One", sans-serif;
+    justify-content: space-evenly;
+    width: 19%; }
+    .header__actions__btn {
+      align-items: center;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.2s; }
+      .header__actions__btn--clone {
+        background-color: #131313;
+        box-shadow: 0.8rem 0.6rem -0.6rem;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.25);
+        color: #fff;
+        padding: 1.2rem 1.9rem; }
+        .header__actions__btn--clone:hover {
+          border-color: #4353ff; }
+      .header__actions__btn--subscribe {
+        background-color: #fd3846;
+        border: none;
+        letter-spacing: 0.2rem;
+        color: #000;
+        padding: 1.6rem 1.8rem; }
+        .header__actions__btn--subscribe img {
+          width: 15px; }
+      .header__actions__btn:hover {
+        transform: translateY(-0.2rem); }
+  @media screen and (max-width: 1400px) {
+    .header__project-info {
+      width: 40%; }
+    .header__actions {
+      width: 27%; } }
+
+.footer {
+  align-items: flex-end;
+  bottom: 0;
+  cursor: none;
+  display: flex;
+  justify-content: flex-end;
+  height: 20vh;
+  padding: 1.5rem 2.5rem;
+  position: fixed;
+  width: 100%; }
+  .footer__credits {
+    color: #6a6a6a;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem; }
+
+.main {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  overflow-x: auto; }
+  .main__div-arrow {
+    height: 100%;
+    width: 18vw; }
