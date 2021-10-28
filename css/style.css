@@ -102,10 +102,17 @@ body {
     justify-content: space-evenly;
     width: 28%; }
     .header__project-info__avatar {
+      align-items: center;
       background-color: #fff;
       border-radius: 50%;
+      display: flex;
       height: 48px;
+      justify-content: center;
       width: 48px; }
+      .header__project-info__avatar img {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px; }
   .header__actions {
     align-items: center;
     display: flex;

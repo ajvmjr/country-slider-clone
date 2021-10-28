@@ -14,10 +14,19 @@
     width: 28%;
 
     &__avatar {
+      align-items: center;
       background-color: $white-color;
       border-radius: 50%;
+      display: flex;
       height: 48px;
+      justify-content: center;
       width: 48px;
+
+      img {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+      }
     }
   }
 
