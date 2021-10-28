@@ -22,3 +22,20 @@
     width: 1px;
   }
 }
+
+.country-name {
+  color: transparent;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 13vw;
+  font-weight: 400;
+  left: -12%;
+  position: absolute;
+  top: 32%;
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+
+  :hover > & {
+    color: $white-color;
+  }
+}

@@ -1,0 +1,11 @@
+.main {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  overflow-x: auto;
+
+  &__div-arrow {
+    height: 100%;
+    width: 18vw;
+  }
+}

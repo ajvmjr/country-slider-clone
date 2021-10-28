@@ -35,6 +35,20 @@ body {
     top: 0.3rem;
     width: 1px; }
 
+.country-name {
+  color: transparent;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 13vw;
+  font-weight: 400;
+  left: -12%;
+  position: absolute;
+  top: 32%;
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white; }
+  :hover > .country-name {
+    color: #fff; }
+
 .u-margin-right-small {
   margin-right: 1rem; }
 
@@ -48,29 +62,31 @@ body {
   position: fixed;
   width: 8rem;
   transition: 0.4s;
-  transition-property: height, width; }
+  transition-property: height, width;
+  z-index: 20; }
   .floating-button .floating-button-image {
     width: 3rem; }
   .floating-button--extra-small {
+    cursor: none;
     height: 0.7rem;
-    width: 0.7rem;
     transition: 0.4s;
-    transition-property: height, width; }
+    transition-property: height, width;
+    width: 0.7rem; }
     .floating-button--extra-small .floating-button-image {
       display: none; }
   .floating-button:hover {
     cursor: pointer; }
 
 .image-container {
-  background-color: white;
+  background-size: cover;
+  filter: grayscale(100%);
   height: 60rem;
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%);
-  width: 120rem;
-  z-index: -10; }
+  min-width: 120rem;
+  transition: all 0.5s; }
+  .image-container:hover {
+    filter: grayscale(0%);
+    transform: scale(0.85);
+    background-position: center; }
 
 .header {
   align-items: center;
@@ -125,3 +141,12 @@ body {
           width: 15px; }
       .header__actions__btn:hover {
         transform: translateY(-0.2rem); }
+
+.main {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  overflow-x: auto; }
+  .main__div-arrow {
+    height: 100%;
+    width: 18vw; }
