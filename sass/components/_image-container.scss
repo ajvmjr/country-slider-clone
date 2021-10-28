@@ -1,9 +1,12 @@
 .image-container {
+  align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
   filter: grayscale(100%);
   height: 60rem;
+  justify-content: center;
   min-width: 120rem;
   transition: all 0.5s;
 
