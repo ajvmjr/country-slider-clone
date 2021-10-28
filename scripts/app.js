@@ -6,6 +6,7 @@ const leftArrowDiv = document.querySelector('.left')
 const rightArrowDiv = document.querySelector('.right')
 
 const imageContainer = document.querySelector('.image-container')
+const countryName = document.querySelector('.country-name')
 
 const X_DIFF = 10
 const Y_DIFF = 30
@@ -14,8 +15,9 @@ const Y_DIFF_SHORTEN = 10
 
 let hasToShortenButton = true
 
-const setImages = (pos = 0) => {
-  imageContainer.style.backgroundImage = `url(${imagesArr.at(pos)})`
+const setImageAndTitle = (pos = 0) => {
+  imageContainer.style.backgroundImage = `url(${imagesArr.at(pos).url})`
+  countryName.innerHTML = imagesArr.at(pos).title
 }
 
 const rotateImage = (degValue) => {
@@ -40,6 +42,32 @@ imageContainer.addEventListener('mouseover', () => {
   hasToShortenButton = false
 })
 
+floatingButton.addEventListener('click', ({ x }) => {
+  const index = imagesArr.findIndex(image => {
+    const formattedUrl = `url("${image.url}")`
+    return formattedUrl === imageContainer.style.backgroundImage
+  })
+
+  const isRightArrow = Boolean(x > window.screen.width / 2)
+
+  if(isRightArrow) {
+    if(index === imagesArr.length - 1) {
+      setImageAndTitle(0)
+      return
+    }
+    setImageAndTitle(index + 1)
+    return
+  }
+
+  // left arrow
+  if(index === 0) {
+    setImageAndTitle(imagesArr.length - 1)
+    return
+  }
+
+  setImageAndTitle(index - 1)
+})
+
 document.addEventListener('mousemove', ({ x, y }) => {
   setTimeout(() => {
     let xPosition = x - X_DIFF
@@ -56,7 +84,7 @@ document.addEventListener('mousemove', ({ x, y }) => {
 })
 
 const initApp = () => {
-  setImages()
+  setImageAndTitle(0)
 }
 
 initApp()
