@@ -71,6 +71,10 @@ body {
       display: none; }
   .floating-button:hover {
     cursor: pointer; }
+  @media screen and (max-width: 1400px) {
+    .floating-button {
+      height: 6rem;
+      width: 6rem; } }
 
 .image-container {
   align-items: center;

@@ -29,4 +29,9 @@
   &:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: $medium) {
+    height: 6rem;
+    width: 6rem;
+  }
 }
