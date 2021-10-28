@@ -1,4 +1,5 @@
 .image-container {
+  animation: moveInLeft 0.5s ease-in-out;
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,6 +10,7 @@
   height: 60vh;
   justify-content: center;
   max-width: 120rem;
+  width: 100%;
   transition: all 0.5s;
 
   &:hover {

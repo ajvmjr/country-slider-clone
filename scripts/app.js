@@ -13,10 +13,20 @@ const countryName = document.querySelector('.country-name')
 
 const X_DIFF = 10
 const Y_DIFF = 30
-const X_DIFF_SHORTEN = 7
-const Y_DIFF_SHORTEN = 10
 
 let hasToShortenButton = true
+let lastArrPos = 0
+
+const initCarouselTimer = (time) => {
+  setInterval(() => {
+    if(lastArrPos === imagesArr.length - 1) {
+      lastArrPos = 0
+    } else {
+      lastArrPos++
+    }
+    setImageAndTitle(lastArrPos)
+  }, time);
+}
 
 const setImageAndTitle = (pos = 0) => {
   imageContainer.style.backgroundImage = `url(${imagesArr.at(pos).url})`
@@ -63,39 +73,32 @@ floatingButton.addEventListener('click', ({ x }) => {
 
   if (isRightArrow) {
     if(index === imagesArr.length - 1) {
-      setImageAndTitle(0)
+      lastArrPos = 0
+      setImageAndTitle(lastArrPos)
       return
     }
-    setImageAndTitle(index + 1)
+    lastArrPos = index + 1
+    setImageAndTitle(lastArrPos)
     return
   }
 
-  // left arrow
-  if(index === 0) {
-    setImageAndTitle(imagesArr.length - 1)
-    return
-  }
-
-  setImageAndTitle(index - 1)
+  lastArrPos = index - 1
+  setImageAndTitle(lastArrPos)
 })
 
 document.addEventListener('mousemove', ({ x, y }) => {
   setTimeout(() => {
-    let xPosition = x - X_DIFF
-    let yPosition = y - Y_DIFF
+    const xPosition = x - X_DIFF
+    const yPosition = y - Y_DIFF
 
-    if(hasToShortenButton) {
-      xPosition = x - X_DIFF_SHORTEN
-      yPosition = y - Y_DIFF_SHORTEN
-    }
-  
     floatingButton.style.left = xPosition + 'px'
     floatingButton.style.top = yPosition + 'px'
-  }, 120);
+  }, 150);
 })
 
 const initApp = () => {
   setImageAndTitle(0)
+  initCarouselTimer(2500)
 }
 
 initApp()
