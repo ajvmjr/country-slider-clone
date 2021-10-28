@@ -79,4 +79,14 @@
       }
     }
   }
+
+  @media screen and (max-width: $medium) {
+    &__project-info {
+      width: 40%;
+    }
+
+    &__actions {
+      width: 27%;
+    }
+  }
 }
