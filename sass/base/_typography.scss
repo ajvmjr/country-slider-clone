@@ -34,4 +34,8 @@
   :hover > & {
     color: $white-color;
   }
+
+  @media screen and (max-width: $medium) {
+    font-size: 11vw;
+  }
 }

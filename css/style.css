@@ -44,6 +44,9 @@ body {
   -webkit-text-stroke-color: white; }
   :hover > .country-name {
     color: #fff; }
+  @media screen and (max-width: 1400px) {
+    .country-name {
+      font-size: 11vw; } }
 
 .u-margin-right-small {
   margin-right: 1rem; }
