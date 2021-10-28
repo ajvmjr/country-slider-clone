@@ -77,7 +77,14 @@ body {
   @media screen and (max-width: 1400px) {
     .floating-button {
       height: 6rem;
-      width: 6rem; } }
+      width: 6rem; }
+      .floating-button--extra-small {
+        height: 0.7rem;
+        transition: 0.4s;
+        transition-property: height, width;
+        width: 0.7rem; }
+        .floating-button--extra-small .floating-button-image {
+          display: none; } }
 
 .image-container {
   align-items: center;
@@ -96,7 +103,7 @@ body {
     transform: scale(0.85); }
   @media screen and (max-width: 1400px) {
     .image-container {
-      max-width: 95rem; } }
+      min-width: 95rem; } }
 
 .header {
   align-items: center;

@@ -33,5 +33,16 @@
   @media screen and (max-width: $medium) {
     height: 6rem;
     width: 6rem;
+
+    &--extra-small {
+      height: 0.7rem;
+      transition: 0.4s;
+      transition-property: height, width;
+      width: 0.7rem;
+
+      .floating-button-image {
+        display: none;
+      }
+    }
   }
 }
