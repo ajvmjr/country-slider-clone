@@ -142,6 +142,20 @@ body {
       .header__actions__btn:hover {
         transform: translateY(-0.2rem); }
 
+.footer {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 6vh;
+  padding: 0 2.5rem;
+  position: fixed;
+  width: 100%; }
+  .footer__credits {
+    color: #6a6a6a;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem; }
+
 .main {
   align-items: center;
   display: flex;
