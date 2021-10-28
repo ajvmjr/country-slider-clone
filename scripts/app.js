@@ -2,6 +2,9 @@ import { imagesArr } from "./imagesArr.js"
 
 const floatingButton = document.querySelector('.floating-button')
 
+const header = document.querySelector('.header')
+const footer = document.querySelector('.footer')
+
 const leftArrowDiv = document.querySelector('.left')
 const rightArrowDiv = document.querySelector('.right')
 
@@ -42,6 +45,14 @@ imageContainer.addEventListener('mouseover', () => {
   hasToShortenButton = false
 })
 
+header.addEventListener('mouseenter', () => {
+  floatingButton.classList.add('floating-button--extra-small')
+})
+
+footer.addEventListener('mouseenter', () => {
+  floatingButton.classList.add('floating-button--extra-small')
+})
+
 floatingButton.addEventListener('click', ({ x }) => {
   const index = imagesArr.findIndex(image => {
     const formattedUrl = `url("${image.url}")`
@@ -50,7 +61,7 @@ floatingButton.addEventListener('click', ({ x }) => {
 
   const isRightArrow = Boolean(x > window.screen.width / 2)
 
-  if(isRightArrow) {
+  if (isRightArrow) {
     if(index === imagesArr.length - 1) {
       setImageAndTitle(0)
       return

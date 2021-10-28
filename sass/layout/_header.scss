@@ -1,10 +1,11 @@
 .header {
   align-items: center;
   display: flex;
+  cursor: none;
   justify-content: space-between;
   position: fixed;
   top: 0;
-  padding: 2.4rem 3.2rem;
+  padding: 3.5rem 3.2rem;
   width: 100%;
 
   &__project-info {

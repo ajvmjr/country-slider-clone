@@ -3,9 +3,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: none;
   display: flex;
   filter: grayscale(100%);
-  height: 60rem;
+  height: 60vh;
   justify-content: center;
   min-width: 120rem;
   transition: all 0.5s;
