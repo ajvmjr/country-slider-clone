@@ -54,8 +54,7 @@ body {
     .project-description {
       font-size: 1.2rem; }
       .project-description::before {
-        left: -0.8rem;
-        height: 100%; } }
+        display: none; } }
 
 .country-name {
   color: transparent;
@@ -128,6 +127,11 @@ body {
   @media screen and (max-width: 1400px) {
     .image-container {
       min-width: 95rem; } }
+  @media screen and (max-width: 768px) {
+    .image-container {
+      height: 30vh;
+      min-width: 55rem;
+      width: 100%; } }
 
 .header {
   align-items: center;
@@ -196,10 +200,13 @@ body {
     .header__actions {
       width: 27%; } }
   @media screen and (max-width: 768px) {
-    .header__project-info {
-      width: 55%; }
-    .header__actions {
-      width: 50%; } }
+    .header {
+      padding: 3.5rem 1rem;
+      max-width: 100vw; }
+      .header__project-info {
+        width: 60%; }
+      .header__actions {
+        width: 50%; } }
 
 .footer {
   align-items: flex-end;
@@ -219,8 +226,7 @@ body {
 .main {
   align-items: center;
   display: flex;
-  height: 100vh;
-  overflow-x: auto; }
+  height: 100vh; }
   .main__div-arrow {
     height: 100%;
     width: 18vw; }

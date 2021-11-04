@@ -21,4 +21,10 @@
   @media screen and (max-width: $medium) {
     min-width: 95rem;
   }
+
+  @media screen and (max-width: $tablet) {
+    height: 30vh;
+    min-width: 55rem;
+    width: 100%;
+  }
 }
