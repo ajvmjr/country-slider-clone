@@ -33,7 +33,7 @@ body {
 .username {
   color: #fff;
   font-family: "Rubik Mono One", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400; }
 
 .project-description {
@@ -50,6 +50,12 @@ body {
     left: -1.2rem;
     top: 0.3rem;
     width: 1px; }
+  @media screen and (max-width: 768px) {
+    .project-description {
+      font-size: 1.2rem; }
+      .project-description::before {
+        left: -0.8rem;
+        height: 100%; } }
 
 .country-name {
   color: transparent;
@@ -189,6 +195,11 @@ body {
       width: 40%; }
     .header__actions {
       width: 27%; } }
+  @media screen and (max-width: 768px) {
+    .header__project-info {
+      width: 55%; }
+    .header__actions {
+      width: 50%; } }
 
 .footer {
   align-items: flex-end;

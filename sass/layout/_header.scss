@@ -89,4 +89,14 @@
       width: 27%;
     }
   }
+
+  @media screen and (max-width: $tablet) {
+    &__project-info {
+      width: 55%;
+    }
+
+    &__actions {
+      width: 50%;
+    }
+  }
 }

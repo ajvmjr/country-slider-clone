@@ -1,7 +1,7 @@
 .username {
   color: $white-color;
   font-family: "Rubik Mono One", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -20,6 +20,15 @@
     left: -1.2rem;
     top: 0.3rem;
     width: 1px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    font-size: 1.2rem;
+
+    &::before {
+      left: -0.8rem;
+      height: 100%;
+    }
   }
 }
 
