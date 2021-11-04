@@ -33,7 +33,7 @@ body {
 .username {
   color: #fff;
   font-family: "Rubik Mono One", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400; }
 
 .project-description {
@@ -50,6 +50,14 @@ body {
     left: -1.2rem;
     top: 0.3rem;
     width: 1px; }
+  @media screen and (max-width: 768px) {
+    .project-description {
+      font-size: 1.2rem; }
+      .project-description::before {
+        display: none; } }
+  @media screen and (max-width: 375px) {
+    .project-description {
+      font-size: 1rem; } }
 
 .country-name {
   color: transparent;
@@ -122,6 +130,24 @@ body {
   @media screen and (max-width: 1400px) {
     .image-container {
       min-width: 95rem; } }
+  @media screen and (max-width: 950px) {
+    .image-container {
+      min-width: 85rem; } }
+  @media screen and (max-width: 768px) {
+    .image-container {
+      height: 30vh;
+      min-width: 55rem;
+      width: 100%; } }
+  @media screen and (max-width: 568px) {
+    .image-container {
+      height: 20vh;
+      min-width: 40rem;
+      width: 100%; } }
+  @media screen and (max-width: 375px) {
+    .image-container {
+      height: 20vh;
+      min-width: 35rem;
+      width: 100%; } }
 
 .header {
   align-items: center;
@@ -189,6 +215,41 @@ body {
       width: 40%; }
     .header__actions {
       width: 27%; } }
+  @media screen and (max-width: 950px) {
+    .header__project-info {
+      width: 50%; }
+    .header__actions {
+      width: 40%; } }
+  @media screen and (max-width: 768px) {
+    .header {
+      padding: 3.5rem 1rem;
+      max-width: 100vw; }
+      .header__project-info {
+        width: 60%; }
+      .header__actions {
+        width: 50%; } }
+  @media screen and (max-width: 568px) {
+    .header {
+      padding: 3.5rem 0.5rem;
+      max-width: 100vw; }
+      .header__project-info {
+        width: 60%; }
+      .header__actions {
+        width: 60%; }
+        .header__actions__btn--clone {
+          padding: 1rem 0.5rem; }
+        .header__actions__btn--subscribe {
+          padding: 1.2rem 0.5rem; } }
+  @media screen and (max-width: 375px) {
+    .header {
+      flex-direction: column;
+      padding: 5rem 0.5rem;
+      max-width: 100vw; }
+      .header__project-info {
+        margin-bottom: 1rem;
+        width: 100%; }
+      .header__actions {
+        width: 100%; } }
 
 .footer {
   align-items: flex-end;

@@ -21,4 +21,25 @@
   @media screen and (max-width: $medium) {
     min-width: 95rem;
   }
+  @media screen and (max-width: $medium2) {
+    min-width: 85rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 30vh;
+    min-width: 55rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $mobile-landscape) {
+    height: 20vh;
+    min-width: 40rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $mobile-portrait) {
+    height: 20vh;
+    min-width: 35rem;
+    width: 100%;
+  }
 }
