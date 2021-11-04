@@ -29,6 +29,10 @@
       display: none;
     }
   }
+
+  @media screen and (max-width: $mobile-portrait) {
+    font-size: 1rem;
+  }
 }
 
 .country-name {
